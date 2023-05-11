@@ -12,13 +12,13 @@
     <body>
         <div class="container">
             <button class="btn btn-primary my-2">
-                <a href="../T19-PHP/form.html" class="text-light">Add User</a>
+                <a href="../T19-PHP/form.php" class="text-light">Add User</a>
             </button>
             <h2>Daftar Pengguna</h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">No</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Aksi</th>
                         <th scope="col">Avatar</th>
                         <th scope="col">Nama</th>
@@ -56,7 +56,7 @@
                                         <a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a>
                                     </button>
                                 </td>
-                                <td><img src=profiles/images.jpg style=width:50px></td>
+                                <td><img src=profiles/'.$profile.' style=width:50px></td>
                                 <td>'.$name.'</td>
                                 <td>'.$email.'</td>
                                 <td>'.$telp.'</td>
@@ -73,4 +73,4 @@
         </div>
     </body>
 </html>
-    
+  

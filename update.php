@@ -91,7 +91,7 @@ if(isset($_POST['submit_btn'])){
                 <div class="mb-3">
                     <label for="alamatlengkap" class="form-label">Alamat Lengkap</label>
                     <textarea class="form-control" id="alamatlengkap" name="alamat_lengkap" rows="3"
-                    value=<?php echo $address?>></textarea>
+                    ><?php echo $address?></textarea>
                 </div>
                 
                 <div class="mb-3">

@@ -4,9 +4,9 @@ include 'connect.php';
 if(isset($_POST['submit_btn'])){
   $name = $_POST['user_name'];
   if ($_POST['user_role']){
-      $role = "admin";
-  } else {
       $role = "user";
+  } else {
+      $role = "admin";
   }
   $password = $_POST['user_password'];
   $email = $_POST['user_email'];
