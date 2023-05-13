@@ -1,5 +1,11 @@
 <?php
 include 'connect.php';
+
+session_start();
+if(!isset($_SESSION['login'])){
+    header('location: login.php');
+}
+
 $id=$_GET['viewid'];
 $sql="select*  from `pendaftaran` where id=$id";
 $result=mysqli_query($conn,$sql);
@@ -47,4 +53,3 @@ echo "
 
 ";
 ?>
-

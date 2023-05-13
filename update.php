@@ -1,5 +1,11 @@
 <?php
 include 'connect.php';
+
+session_start();
+if(!isset($_SESSION['email'])){
+    header('location: login.php');
+}
+
 $id=$_GET['updateid'];
 $sql="select*  from `pendaftaran` where id=$id";
 $result=mysqli_query($conn,$sql);
@@ -35,7 +41,7 @@ if(isset($_POST['submit_btn'])){
   $result = $conn -> query($sql);
   if($result){
     // echo "update successfull";
-    header('location: display.php');
+    header('location:login.php');
   } else{
     die(mysqli_error($conn));
   }

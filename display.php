@@ -1,5 +1,10 @@
 <?php 
-    include 'connect.php';
+include 'connect.php';
+session_start();
+if(!isset($_SESSION['login'])){
+    header('location: login.php');
+}
+    
 ?>
 
 <!DOCTYPE html>
@@ -10,10 +15,11 @@
     </head>
 
     <body>
-        <div class="container">
-            <button class="btn btn-primary my-2">
-                <a href="../T19-PHP/form.php" class="text-light">Add User</a>
-            </button>
+        <div class="container ">
+            <div class="justify-content-space-between">
+                <a class="btn btn-primary my-2" href="../T19-PHP/form.php" role="button">Add User</a>
+                <a class="btn btn-danger " href="logout.php" role="button">Logout</a>
+            </div>  
             <h2>Daftar Pengguna</h2>
             <table class="table">
                 <thead>
@@ -46,15 +52,11 @@
                             <tr>
                                 <th scope="row">'.$id.'</th>
                                 <td>
-                                    <button class="btn btn-primary">
-                                        <a href="view.php?viewid='.$id.'" class="text-light">View</a>
-                                    </button>
-                                    <button class="btn btn-warning">
-                                        <a href="update.php?updateid='.$id.'" class="text-dark">Update</a>
-                                    </button>
-                                    <button class="btn btn-danger">
-                                        <a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a>
-                                    </button>
+                                    <p class="lead">
+                                        <a class="btn btn-primary" href="view.php?viewid='.$id.'" role="button">View</a>
+                                        <a class="btn btn-warning" href="update.php?updateid='.$id.'" role="button">Update</a>
+                                        <a class="btn btn-danger"href="delete.php?deleteid='.$id.'" role="button">Delete</a>
+                                    </p>
                                 </td>
                                 <td><img src=profiles/'.$profile.' style=width:50px></td>
                                 <td>'.$name.'</td>
@@ -62,7 +64,6 @@
                                 <td>'.$telp.'</td>
                                 <td>'.$address.'</td>
                                 <td>'.$role.'</td>
-                                
                             </tr>
                             ';
                             }
