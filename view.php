@@ -22,7 +22,7 @@ echo "
 <center>
     <table>
         <h1>Data ID $id </h1>
-        <tr rowspan=14><img src='profiles/images.jpg' style='width:140px'></tr> 
+        <tr rowspan=14><img src='profiles/$profile' style='width:140px' /tr> 
         <tr>
             <td>Nama lengkap</td>
             <th>:</th>
