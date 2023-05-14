@@ -58,7 +58,7 @@ if(!isset($_SESSION['login'])){
                                         <a class="btn btn-danger"href="delete.php?deleteid='.$id.'" role="button">Delete</a>
                                     </p>
                                 </td>
-                                <td><img src=profiles/'.$profile.' style=width:50px></td>
+                                <td><img src=profiles/'.$profile.' style=width:50px /td>
                                 <td>'.$name.'</td>
                                 <td>'.$email.'</td>
                                 <td>'.$telp.'</td>
